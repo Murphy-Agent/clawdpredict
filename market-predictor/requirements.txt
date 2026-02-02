@@ -1,0 +1,23 @@
+# Market Predictor Dependencies
+# Install with: pip install -r requirements.txt
+
+# HTTP requests
+requests>=2.31.0
+
+# Optional: For direct Polymarket CLOB integration
+# web3>=6.0.0
+# eth-account>=0.10.0
+
+# Optional: For enhanced sentiment analysis
+# transformers>=4.30.0
+# torch>=2.0.0
+
+# Optional: For scheduling/cron
+# schedule>=1.2.0
+# apscheduler>=3.10.0
+
+# Development
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# mypy>=1.0.0

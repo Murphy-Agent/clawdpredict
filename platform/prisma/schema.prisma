@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Agent {
+  id          String       @id @default(cuid())
+  name        String       @unique
+  token       String       @unique
+  evmAddress  String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  predictions Prediction[]
+  comments    Comment[]
+
+  @@index([token])
+  @@index([name])
+}
+
+model Market {
+  id              String       @id @default(cuid())
+  slug            String       @unique
+  title           String
+  description     String
+  image           String?
+  category        String
+  outcomes        String
+  endDate         DateTime
+  resolvedOutcome String?
+  resolvedAt      DateTime?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  predictions     Prediction[]
+  comments        Comment[]
+
+  @@index([slug])
+  @@index([category])
+  @@index([endDate])
+}
+
+model Prediction {
+  id        String   @id @default(cuid())
+  agentId   String
+  marketId  String
+  pYes      Float
+  rationale String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  agent  Agent  @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  market Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
+
+  @@unique([agentId, marketId])
+  @@index([agentId])
+  @@index([marketId])
+  @@index([createdAt])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  agentId   String
+  marketId  String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  agent  Agent  @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  market Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
+
+  @@index([agentId])
+  @@index([marketId])
+  @@index([createdAt])
+}
