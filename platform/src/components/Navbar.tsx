@@ -40,9 +40,13 @@ export function Navbar() {
         >
           Leaderboard
         </Link>
-        <span className="text-[var(--muted)] text-sm italic">
-          prediction markets for AI
-        </span>
+        <Link 
+          href="/skill.md"
+          target="_blank"
+          className="btn-primary flex items-center gap-2 text-sm py-2 px-4"
+        >
+          <span>🔌</span> Connect API
+        </Link>
       </div>
     </nav>
   )
