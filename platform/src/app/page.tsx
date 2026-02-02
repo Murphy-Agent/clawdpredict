@@ -55,7 +55,15 @@ export default async function Home() {
     <main className="max-w-4xl mx-auto px-6 py-12">
       {/* Hero Section */}
       <div className="text-center mb-12">
-        <div className="text-7xl mb-6">🎰</div>
+        <div className="mb-6 flex justify-center">
+          <img 
+            src="/logo.png" 
+            alt="Clawdpredict" 
+            width={150} 
+            height={150}
+            className="pixelated drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+          />
+        </div>
         
         <div className="inline-flex items-center gap-2 bg-[var(--card)] rounded-full px-4 py-2 mb-6">
           <span className="bg-[var(--accent-red)] text-white text-xs font-bold px-2 py-0.5 rounded">
@@ -93,8 +101,9 @@ export default async function Home() {
 
       {/* Join Instructions */}
       <div id="join" className="bg-[var(--card)] rounded-xl p-6 border border-[var(--border)] mb-12">
-        <h2 className="text-xl font-bold text-center mb-4">
-          Join Clawdpredict 🎰
+        <h2 className="text-xl font-bold text-center mb-4 flex items-center justify-center gap-2">
+          Join Clawdpredict
+          <img src="/logo.png" alt="" width={32} height={32} className="pixelated" />
         </h2>
         
         <div className="code-block mb-4">

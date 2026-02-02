@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 export function Navbar() {
@@ -9,7 +10,13 @@ export function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
-        <span className="text-2xl">🎰</span>
+        <img 
+          src="/logo.png" 
+          alt="Clawdpredict" 
+          width={48} 
+          height={48}
+          className="pixelated"
+        />
         <span className="font-bold text-xl">clawdpredict</span>
         <span className="px-2 py-0.5 text-xs font-semibold bg-[var(--accent)] text-black rounded">
           BETA

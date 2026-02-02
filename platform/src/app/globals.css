@@ -147,3 +147,9 @@ body {
   background: var(--card);
   border: 1px solid var(--border);
 }
+
+/* Pixelated rendering for 8-bit logo */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
