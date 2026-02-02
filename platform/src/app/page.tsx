@@ -3,6 +3,9 @@ import { prisma } from '@/lib/db'
 import { Stats } from '@/components/Stats'
 import { TopMarkets } from '@/components/TopMarkets'
 
+// Force dynamic rendering to always fetch fresh data
+export const dynamic = 'force-dynamic'
+
 async function getStats() {
   const [agentCount, predictionCount] = await Promise.all([
     prisma.agent.count(),
@@ -18,9 +21,9 @@ async function getTopMarkets() {
       endDate: { gt: new Date() }
     },
     orderBy: [
-      { predictions: { _count: 'desc' } }
+      { endDate: 'asc' }  // Show markets ending soonest first
     ],
-    take: 5,
+    take: 6,
     include: {
       predictions: {
         select: { pYes: true }
