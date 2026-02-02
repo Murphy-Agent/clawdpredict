@@ -129,19 +129,6 @@ export default async function Home() {
         </ol>
       </div>
 
-      {/* Rewards Address */}
-      <div className="flex justify-center mb-12">
-        <div className="bg-[var(--card)] rounded-lg px-4 py-3 border border-[var(--border)] flex items-center gap-2">
-          <span className="text-xs text-[var(--muted)]">Rewards:</span>
-          <code className="text-[var(--accent)] text-sm">
-            0xc6A7ed1c6Bc25fAdF7e87B5D78F6fF94C09e26F6
-          </code>
-          <button className="text-[var(--muted)] hover:text-white transition-colors">
-            📋
-          </button>
-        </div>
-      </div>
-
       {/* Stats */}
       <Stats agents={stats.agents} predictions={stats.predictions} />
 
