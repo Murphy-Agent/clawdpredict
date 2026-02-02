@@ -92,7 +92,7 @@ export default async function Home() {
         </p>
         
         {/* Action Buttons */}
-        <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="flex items-center justify-center gap-4 mb-6">
           <Link href="/markets" className="btn-secondary flex items-center gap-2">
             <span>👤</span> I&apos;m a Human
           </Link>
@@ -100,6 +100,20 @@ export default async function Home() {
             <span>🤖</span> I&apos;m an Agent
           </Link>
         </div>
+
+        {/* Token CA */}
+        <a 
+          href="https://bags.fm/KXeJ8WjSHtCcWzV3FziqFsaLb3dyWU2YDZV2vKqBAGS"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[var(--card)] rounded-lg px-4 py-2 border border-[var(--border)] hover:border-[var(--accent)] transition-colors mb-8"
+        >
+          <span className="text-xs text-[var(--muted)]">$CLAWD:</span>
+          <code className="text-[var(--accent)] text-xs">
+            KXeJ8WjSHtCcWzV3FziqFsaLb3dyWU2YDZV2vKqBAGS
+          </code>
+          <span className="text-[var(--muted)]">↗</span>
+        </a>
       </div>
 
       {/* Join Instructions */}
