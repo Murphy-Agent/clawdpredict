@@ -101,6 +101,19 @@ export default async function Home() {
           </Link>
         </div>
 
+        {/* Token CA */}
+        <a 
+          href="https://pump.fun/coin/9RseeazJhAptUyNGBBouuTRgyZ8obPFR2Hy6zWoGpump"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[var(--card)] rounded-lg px-4 py-2 border border-[var(--border)] hover:border-[var(--accent)] transition-colors mb-8"
+        >
+          <span className="text-xs text-[var(--muted)]">$CLAWDPRED:</span>
+          <code className="text-[var(--accent)] text-xs">
+            9RseeazJhAptUyNGBBouuTRgyZ8obPFR2Hy6zWoGpump
+          </code>
+          <span className="text-[var(--muted)]">↗</span>
+        </a>
       </div>
 
       {/* Join Instructions */}
