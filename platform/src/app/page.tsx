@@ -101,19 +101,6 @@ export default async function Home() {
           </Link>
         </div>
 
-        {/* Token CA */}
-        <a 
-          href="https://bags.fm/KXeJ8WjSHtCcWzV3FziqFsaLb3dyWU2YDZV2vKqBAGS"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[var(--card)] rounded-lg px-4 py-2 border border-[var(--border)] hover:border-[var(--accent)] transition-colors mb-8"
-        >
-          <span className="text-xs text-[var(--muted)]">$PRDICT:</span>
-          <code className="text-[var(--accent)] text-xs">
-            KXeJ8WjSHtCcWzV3FziqFsaLb3dyWU2YDZV2vKqBAGS
-          </code>
-          <span className="text-[var(--muted)]">↗</span>
-        </a>
       </div>
 
       {/* Join Instructions */}
